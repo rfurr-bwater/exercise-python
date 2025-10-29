@@ -14,12 +14,11 @@ def prop_above(ls):
     for i in ls:
         if i > avg:
             count+=1
-    #return count/len(ls) # Return percentage?
-    return count
-
+    return count/len(ls) # Return percentage?
 
 def median(ls):
     '''Returns the median of a list'''
+    # Psst, you can also use statistics.median() after you import statistics
     ls.sort()
     if len(ls) % 2 == 0:
         upper_idx = int(len(ls)/2)
@@ -44,8 +43,7 @@ data = []
 
 for line in f:
     nums = line.split(",")
-    # Try-catch to bypass issues with blank values that return as '' and the header row
-    # Why haven't you taught us how to use the csv module yet Dr. O'Neil?
+    # Try-catch to pass over issues with blank values that return as '' as well as the header row
     try:
         data.append(float(nums[0]))
     except ValueError:
