@@ -45,7 +45,7 @@ data = []
 for line in f:
     nums = line.split(",")
     # Try-catch to bypass issues with blank values that return as '' and the header row
-    # Why haven't you taught us how to use csvtool yet Dr. O'Neil?
+    # Why haven't you taught us how to use the csv module yet Dr. O'Neil?
     try:
         data.append(float(nums[0]))
     except ValueError:
