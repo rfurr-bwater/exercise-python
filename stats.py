@@ -14,7 +14,7 @@ def prop_above(ls):
     for i in ls:
         if i > avg:
             count+=1
-    return count/len(ls) # Return percentage?
+    return count/len(ls)
 
 def median(ls):
     '''Returns the median of a list'''
